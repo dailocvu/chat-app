@@ -6,7 +6,7 @@ const placeholderChat = [
     id: 3,
     name: "Victor Erixson",
     avartar: person3,
-    message: "This is a placeholder",
+    message: "Wellcome",
     date: "20 June",
     newMessage: 2,
   },
@@ -14,7 +14,7 @@ const placeholderChat = [
     id: 4,
     name: "Jony Ive",
     avartar: person4,
-    message: "This is a placeholder",
+    message: "Sure 9am",
     date: "20 June",
     newMessage: 5,
   },
@@ -24,7 +24,7 @@ const ChatList = ({ receivedMessage, sentMessage }) => {
   return (
     <div className="flex flex-col gap-3 overflow-y-auto chat-list-height">
       <div className="h-21 w-full bg-white rounded-md cursor-pointer hover:bg-sidebar transition ease-in-outout duration-300 shadow-sm">
-        <div className="p-4 flex items-center justify-between gap-3">
+        <div className="p-4 flex items-center justify-between ">
           <div className="flex flex-row items-center gap-4">
             <img
               src={receivedMessage.avartar}
@@ -47,8 +47,11 @@ const ChatList = ({ receivedMessage, sentMessage }) => {
         </div>
       </div>
       {placeholderChat.map((item) => (
-        <div className="h-21 w-full bg-white rounded-md cursor-pointer hover:bg-sidebar transition ease-in-outout duration-300 shadow-sm">
-          <div className="p-4 flex items-center justify-between gap-3">
+        <div
+          key={item.id}
+          className="h-21 w-full bg-white rounded-md cursor-pointer hover:bg-sidebar transition ease-in-outout duration-300 shadow-sm"
+        >
+          <div className="p-4 flex items-center justify-between">
             <div className="flex flex-row items-center gap-4">
               <img
                 src={item.avartar}
